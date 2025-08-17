@@ -18,6 +18,39 @@ Goal: Explore modern patterns, learn by building, and create a small platform th
 
 ---
 
+## 📦 Recommended Project Structure
+
+```
+nebulaedge/
+  apps/              # Rust microservices (API, Orchestrator, Workers)
+    api/             # HTTP API service
+    orchestrator/    # Event orchestration service
+    edge-worker/     # Cloudflare Worker integration
+  crates/            # Shared Rust libraries
+    domain/          # Core domain models
+    rag-sdk/         # RAG and AI helper library
+    skills-sdk/      # Wasm skill SDK
+  skills/            # Example Wasm skills
+    markdown-to-text/
+    pii-redaction/
+  infra/             # Infrastructure as Code (Docker, Terraform, Kubernetes)
+    docker/
+    terraform/
+  ops/               # Observability and monitoring
+    grafana/
+    opentelemetry/
+  docs/              # Documentation, design diagrams, notes
+  scripts/           # Helper scripts (build, deploy, test)
+```
+
+* **apps/** contains all microservices and edge workers.
+* **crates/** holds reusable libraries.
+* **skills/** are individual, portable Wasm components.
+* **infra/** and **ops/** handle infrastructure and monitoring.
+* **docs/** and **scripts/** support development and maintenance.
+
+---
+
 ## 🎯 Project Goals
 
 * Act as an architecture playground for modern concepts.
